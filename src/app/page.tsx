@@ -13,17 +13,6 @@ export default function Home() {
   const [letterSpacing, setLetterSpacing] = useState(-0.01)
 
   useEffect(() => {
-    // Set exact 1vh for mobile browsers
-    const onResize = () => {
-      const vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-    }
-
-    // Initial call
-    onResize()
-
-    window.addEventListener('resize', onResize)
-
     const documentFonts = document.fonts
 
     if (documentFonts) {
@@ -32,10 +21,6 @@ export default function Home() {
       })
     } else {
       setReady(true)
-    }
-
-    return () => {
-      window.removeEventListener('resize', onResize)
     }
   }, [])
 
@@ -191,13 +176,13 @@ export default function Home() {
           <div className={s.downloadButtonsContainer}>
             <a
               className={clsx(s.button, s.downloadButton, s.otf)}
-              href="/interop_1.7_otf.zip"
+              href="/Interop_1.7_otf.zip"
             >
               OTF 다운로드
             </a>
             <a
               className={clsx(s.button, s.downloadButton, s.woff)}
-              href="/interop_1.7_woff.zip"
+              href="/Interop_1.7_woff.zip"
             >
               WOFF 다운로드
             </a>

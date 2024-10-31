@@ -13,12 +13,12 @@
 
 .section {
   padding: 100px 0;
-  min-height: calc(100 * var(--vh, 1vh));
+  min-height: 100svh;
 }
 
 .halfSection {
   padding: 100px 0;
-  min-height: calc(50 * var(--vh, 1vh));
+  min-height: 50svh;
 }
 
 .hero {
@@ -152,14 +152,14 @@
   padding: 120px 0;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .playground {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 
   .controllers {
@@ -216,7 +216,7 @@
 
   .textarea {
     width: 100%;
-    height: calc(var(--vh, 1vh) * 50);
+    height: 50svh;
     min-height: 300px;
     max-height: 400px;
     padding: 1.5rem;
