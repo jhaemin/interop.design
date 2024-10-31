@@ -9,7 +9,7 @@ export default function Home() {
   const [ready, setReady] = useState(false)
   const [fontSize, setFontSize] = useState(32)
   const [fontWeight, setFontWeight] = useState(500)
-  const [lineHeight, setLineHeight] = useState(1.2)
+  const [lineHeight, setLineHeight] = useState(1.4)
   const [letterSpacing, setLetterSpacing] = useState(-0.01)
 
   useEffect(() => {
