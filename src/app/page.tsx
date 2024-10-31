@@ -296,7 +296,7 @@ export default function Home() {
       </div>
 
       <footer className={s.footer}>
-        <span>
+        <span className={s.content}>
           <span className={s.intro}>Designed and developed by </span>
           <a
             href="https://www.jhaemin.com"

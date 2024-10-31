@@ -167,7 +167,7 @@
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
 
     @media only screen and (max-width: 600px) {
       grid-template-columns: 1fr 1fr;
@@ -251,25 +251,30 @@
   justify-content: center;
   align-items: center;
   padding: 50px 0;
+  letter-spacing: 0;
+
+  .content {
+    opacity: 0.4;
+  }
 
   span {
     // opacity: 0.5;
   }
 
   .intro {
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 
   .credit {
     font-weight: 500;
-    background: linear-gradient(
-      90deg,
-      #03c36a 0%,
-      #f6bb07 33.3333%,
-      var(--red) 66.6666%,
-      var(--purple) 90%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: linear-gradient(
+    //   90deg,
+    //   #03c36a 0%,
+    //   #f6bb07 33.3333%,
+    //   var(--red) 66.6666%,
+    //   var(--purple) 90%
+    // );
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
 }
