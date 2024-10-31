@@ -15,105 +15,110 @@ export default function Home() {
   useEffect(() => {
     const documentFonts = document.fonts
 
+    function ready() {
+      setReady(true)
+
+      timeline([
+        [
+          `.${s.englishTitle}`,
+          {
+            scale: [1.4, 1],
+            color: ['#3DFD95', '#FFE501', '#FF0000', '#6349FF'],
+          },
+          {
+            delay: 0.2,
+            duration: 1,
+          },
+        ],
+        [
+          `.${s.englishTitle}`,
+          {
+            y: ['0', '-1.82em'],
+            scale: [1, 0.4],
+            color: 'inherit',
+          },
+          { duration: 0.8, easing: [0.83, 0, 0.17, 1] },
+        ],
+        [
+          `.${s.hangulTitle}`,
+          {
+            opacity: [0, 1],
+            y: ['0.5em', '-1em'],
+            color: ['transparent', 'inherit'],
+          },
+          { at: '-0.5', duration: 0.5 },
+        ],
+        [
+          `.${s.subtitle}`,
+          {
+            opacity: 1,
+            y: ['1em', '0'],
+          },
+          { at: '-0.3', duration: 0.5 },
+        ],
+        [
+          `.${s.downloadButton}`,
+          {
+            opacity: 1,
+            y: ['0.5em', '0'],
+          },
+          { at: '-0.3', duration: 0.5 },
+        ],
+      ])
+
+      const hero = document.querySelector(`.${s.hero}`)!
+
+      scroll(
+        animate(`.${s.hero}`, {
+          opacity: [1, 0.2],
+          filter: ['blur(0)', 'blur(2px)'],
+        }),
+        {
+          target: hero,
+          offset: ['end end', 'end center'],
+        }
+      )
+      scroll(
+        animate(`.${s.title}`, {
+          y: ['1em', '-1em'],
+        }),
+        {
+          target: hero,
+          offset: ['end end', 'end center'],
+        }
+      )
+      scroll(
+        animate(`.${s.subtitleWrapper}`, {
+          y: ['0', '-4.5em'],
+        }),
+        {
+          target: hero,
+          offset: ['end end', 'end center'],
+        }
+      )
+      scroll(
+        animate(`.${s.downloadButtonsContainer}`, {
+          y: ['0', '-3em'],
+        }),
+        {
+          target: hero,
+          offset: ['end end', 'end center'],
+        }
+      )
+    }
+
     if (documentFonts) {
       documentFonts.ready.then(() => {
-        setReady(true)
+        console.log('Fonts are ready')
+        ready()
       })
     } else {
-      setReady(true)
+      ready()
     }
   }, [])
 
   useEffect(() => {
-    timeline([
-      [
-        `.${s.englishTitle}`,
-        {
-          scale: [1.4, 1],
-          color: ['#3DFD95', '#3DFD95', '#FFE501', '#FF0000', '#6349FF'],
-        },
-        {
-          duration: 0.8,
-        },
-      ],
-      [
-        `.${s.englishTitle}`,
-        {
-          y: ['0', '-1.82em'],
-          scale: [1, 0.4],
-          color: 'inherit',
-        },
-        { duration: 0.8, easing: [0.83, 0, 0.17, 1] },
-      ],
-      [
-        `.${s.hangulTitle}`,
-        {
-          opacity: [0, 1],
-          y: ['0.5em', '-1em'],
-          color: ['transparent', 'inherit'],
-        },
-        { at: '-0.5', duration: 0.5 },
-      ],
-      [
-        `.${s.subtitle}`,
-        {
-          opacity: 1,
-          y: ['1em', '0'],
-        },
-        { at: '-0.3', duration: 0.5 },
-      ],
-      [
-        `.${s.downloadButton}`,
-        {
-          opacity: 1,
-          y: ['0.5em', '0'],
-        },
-        { at: '-0.3', duration: 0.5 },
-      ],
-    ])
-
-    const hero = document.querySelector(`.${s.hero}`)!
-
-    scroll(
-      animate(`.${s.hero}`, {
-        opacity: [1, 0.2],
-        filter: ['blur(0)', 'blur(2px)'],
-      }),
-      {
-        target: hero,
-        offset: ['end end', 'end center'],
-      }
-    )
-    scroll(
-      animate(`.${s.title}`, {
-        y: ['1em', '-1em'],
-      }),
-      {
-        target: hero,
-        offset: ['end end', 'end center'],
-      }
-    )
-    scroll(
-      animate(`.${s.subtitleWrapper}`, {
-        y: ['0', '-4.5em'],
-      }),
-      {
-        target: hero,
-        offset: ['end end', 'end center'],
-      }
-    )
-    scroll(
-      animate(`.${s.downloadButtonsContainer}`, {
-        y: ['0', '-3em'],
-      }),
-      {
-        target: hero,
-        offset: ['end end', 'end center'],
-      }
-    )
-
     // const introduction = document.querySelector(`.${s.introduction}`)!
-
     // scroll(
     //   animate(`.${s.introduction}`, {
     //     opacity: [1, 0],
