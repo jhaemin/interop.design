@@ -34,6 +34,7 @@
     text-align: center;
     margin-bottom: 1rem;
     position: relative;
+    will-change: transform;
 
     .englishTitleWrapper {
       position: absolute;
@@ -92,6 +93,7 @@
 
   .subtitleWrapper {
     display: flex;
+    will-change: transform;
   }
 
   .subtitle {
@@ -107,6 +109,7 @@
     flex-direction: row;
     gap: 8px;
     margin-top: 3rem;
+    will-change: transform;
 
     .downloadButton {
       opacity: 0;
