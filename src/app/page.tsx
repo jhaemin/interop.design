@@ -194,7 +194,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={clsx(s.section, s.introduction)}>
+        <div className={clsx(s.introduction)}>
           <p>
             Interop은 Inter font family와 Noto Sans의 한글 glyphs를 조합한
             글꼴입니다. 한글과 alphabet이 마치 하나의 언어처럼 보이게 만들기
@@ -205,7 +205,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className={clsx(s.section, s.playground)}>
+        <div className={clsx(s.playground)}>
           <div className={s.controllers}>
             <div className={s.controller}>
               <label htmlFor="size">크기</label>
