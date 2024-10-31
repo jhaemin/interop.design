@@ -1,0 +1,87 @@
+:root {
+  --text-color: #000;
+  --always-dark-color: #000;
+  --surface-color: #fff;
+  --gray: #f4f4f4;
+
+  --green: #3dfd95;
+  --yellow: #ffe501;
+  --red: #ff0000;
+  --purple: #6349ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #f4f4f4;
+    --surface-color: #000;
+    --gray: #1d1d1d;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Interop, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font: inherit;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--text-color);
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 0px;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    cursor: default;
+    border: none;
+    border-radius: 50%;
+  }
+
+  &::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    cursor: default;
+    border: none;
+    border-radius: 50%;
+  }
+}
