@@ -91,8 +91,8 @@ export default function Home() {
 
     scroll(
       animate(`.${s.hero}`, {
-        opacity: [1, 0],
-        filter: ['blur(0)', 'blur(5px)'],
+        opacity: [1, 0.2],
+        filter: ['blur(0)', 'blur(2px)'],
       }),
       {
         target: hero,
