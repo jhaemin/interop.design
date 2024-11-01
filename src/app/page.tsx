@@ -7,8 +7,8 @@ import s from './page.module.scss'
 
 export default function Home() {
   const [ready, setReady] = useState(false)
-  const [fontSize, setFontSize] = useState(32)
-  const [fontWeight, setFontWeight] = useState(500)
+  const [fontSize, setFontSize] = useState(27)
+  const [fontWeight, setFontWeight] = useState(600)
   const [lineHeight, setLineHeight] = useState(1.4)
   const [letterSpacing, setLetterSpacing] = useState(-0.01)
 
@@ -67,8 +67,9 @@ export default function Home() {
         [
           `.${s.heroContent}`,
           {
+            scale: [1.1, 1],
             boxShadow: [
-              '-60px -60px 60px -60px rgba(var(--green-rgb), 0.8), 60px 60px 60px -60px rgba(var(--yellow-rgb), 0.8), 60px -60px 60px -60px rgba(var(--red-rgb), 0.8), -60px 60px 60px -60px rgba(var(--purple-rgb), 0.8)',
+              '-64px -64px 64px -64px rgba(var(--green-rgb), 0.8), 64px 64px 64px -64px rgba(var(--yellow-rgb), 0.8), 64px -64px 64px -64px rgba(var(--red-rgb), 0.8), -64px 64px 64px -64px rgba(var(--purple-rgb), 0.8), -16px -16px 16px -16px rgba(var(--green-rgb), 0.5), 16px 16px 16px -16px rgba(var(--yellow-rgb), 0.5), 16px -16px 16px -16px rgba(var(--red-rgb), 0.5), -16px 16px 16px -16px rgba(var(--purple-rgb), 0.5)',
             ],
           },
           {
@@ -207,6 +208,17 @@ export default function Home() {
           </p>
         </div>
 
+        <div className={s.weights}>
+          <span className={s.thin}>씬 Thin</span>
+          <span className={s.extraLight}>엑스트라라이트 ExtraLight</span>
+          <span className={s.light}>라이트 Light</span>
+          <span className={s.regular}>레귤러 Regular</span>
+          <span className={s.medium}>미디엄 Medium</span>
+          <span className={s.semiBold}>세미볼드 SemiBold</span>
+          <span className={s.bold}>볼드 Bold</span>
+          <span className={s.extraBold}>엑스트라볼드 ExtraBold</span>
+        </div>
+
         <div className={clsx(s.playground)}>
           <div className={s.controllers}>
             <div className={s.controller}>
@@ -274,7 +286,7 @@ export default function Home() {
             className={s.textarea}
             autoComplete="off"
             spellCheck="false"
-            defaultValue="오늘은 team meeting이 있는 날이라서, 모두가 project 진행 상황을 공유하고 feedback을 주고받을 예정입니다."
+            defaultValue="오늘은 team meeting이 있는 날이라서, 모두가 project 진행 상황을 공유하고 feedback을 주고받을 예정입니다. Minimalism is an art that requires maximum artistry, experience, and precision."
             name=""
             id=""
             style={{

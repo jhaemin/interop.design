@@ -156,7 +156,7 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: inset 0 0 0 2em var(--color);
+  box-shadow: inset 0 0 0 2em var(--color), 0 0 0 0 transparent;
   transition: box-shadow 0.2s ease, color 0.2s ease, border-radius 0.2s ease;
 
   &:hover {
@@ -167,7 +167,7 @@
 
   &:active {
     transition: box-shadow 0.1s ease;
-    box-shadow: inset 0 0 0 4px var(--active-color);
+    box-shadow: inset 0 0 0 4px var(--active-color), 0 0 0 0 transparent;
   }
 }
 
@@ -180,6 +180,39 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.weights {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(0px, 8vw, 3rem);
+  padding-bottom: 100px;
+  line-height: 1.2;
+
+  .thin {
+    font-weight: 100;
+  }
+  .extraLight {
+    font-weight: 200;
+  }
+  .light {
+    font-weight: 300;
+  }
+  .regular {
+    font-weight: 400;
+  }
+  .medium {
+    font-weight: 500;
+  }
+  .semiBold {
+    font-weight: 600;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .extraBold {
+    font-weight: 800;
+  }
 }
 
 .playground {
