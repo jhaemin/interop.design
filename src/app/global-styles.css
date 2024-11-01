@@ -8,6 +8,11 @@
   --yellow: #ffe501;
   --red: #ff0000;
   --purple: #6349ff;
+
+  --green-rgb: 61, 253, 149;
+  --yellow-rgb: 255, 229, 1;
+  --red-rgb: 255, 0, 0;
+  --purple-rgb: 99, 73, 255;
 }
 
 @media (prefers-color-scheme: dark) {

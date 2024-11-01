@@ -64,6 +64,18 @@ export default function Home() {
           },
           { at: '-0.3', duration: 0.5 },
         ],
+        [
+          `.${s.heroContent}`,
+          {
+            boxShadow: [
+              '-60px -60px 60px -60px rgba(var(--green-rgb), 0.8), 60px 60px 60px -60px rgba(var(--yellow-rgb), 0.8), 60px -60px 60px -60px rgba(var(--red-rgb), 0.8), -60px 60px 60px -60px rgba(var(--purple-rgb), 0.8)',
+            ],
+          },
+          {
+            at: '-1',
+            duration: 1,
+          },
+        ],
       ])
 
       const hero = document.querySelector(`.${s.hero}`)!
@@ -117,20 +129,6 @@ export default function Home() {
     }
   }, [])
 
-  useEffect(() => {
-    // const introduction = document.querySelector(`.${s.introduction}`)!
-    // scroll(
-    //   animate(`.${s.introduction}`, {
-    //     opacity: [1, 0],
-    //     y: ['0', '1em'],
-    //   }),
-    //   {
-    //     target: introduction,
-    //     offset: ['start end', 'start start'],
-    //   }
-    // )
-  }, [])
-
   return (
     <div>
       <div
@@ -139,58 +137,62 @@ export default function Home() {
         })}
       >
         <div className={clsx(s.section, s.hero)}>
-          <h1 className={s.title}>
-            <span className={s.englishTitleWrapper}>
-              <span className={s.englishTitle}>Interop</span>
-            </span>
-            <span className={s.hangulTitle}>
-              인터롭
-              <span
-                aria-hidden="true"
-                className={clsx(s.hangulTitleEffect, s.green)}
-              >
-                인터롭
-              </span>
-              <span
-                aria-hidden="true"
-                className={clsx(s.hangulTitleEffect, s.yellow)}
-              >
-                인터롭
-              </span>
-              <span
-                aria-hidden="true"
-                className={clsx(s.hangulTitleEffect, s.red)}
-              >
-                인터롭
-              </span>
-              <span
-                aria-hidden="true"
-                className={clsx(s.hangulTitleEffect, s.purple)}
-              >
-                인터롭
-              </span>
-            </span>
-          </h1>
-          <div className={s.subtitleWrapper}>
-            <p className={s.subtitle}>
-              세상에서 가장 조화로운
-              <br />
-              한글 alphabet 고딕체
-            </p>
-          </div>
-          <div className={s.downloadButtonsContainer}>
-            <a
-              className={clsx(s.button, s.downloadButton, s.otf)}
-              href="/Interop_1.7_otf.zip"
-            >
-              OTF 다운로드
-            </a>
-            <a
-              className={clsx(s.button, s.downloadButton, s.woff)}
-              href="/Interop_1.7_woff.zip"
-            >
-              WOFF 다운로드
-            </a>
+          <div className={s.heroContent}>
+            <div className={s.heroContentShift}>
+              <h1 className={s.title}>
+                <span className={s.englishTitleWrapper}>
+                  <span className={s.englishTitle}>Interop</span>
+                </span>
+                <span className={s.hangulTitle}>
+                  인터롭
+                  <span
+                    aria-hidden="true"
+                    className={clsx(s.hangulTitleEffect, s.green)}
+                  >
+                    인터롭
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className={clsx(s.hangulTitleEffect, s.yellow)}
+                  >
+                    인터롭
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className={clsx(s.hangulTitleEffect, s.red)}
+                  >
+                    인터롭
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className={clsx(s.hangulTitleEffect, s.purple)}
+                  >
+                    인터롭
+                  </span>
+                </span>
+              </h1>
+              <div className={s.subtitleWrapper}>
+                <p className={s.subtitle}>
+                  세상에서 가장 조화로운
+                  <br />
+                  한글 alphabet 고딕체
+                </p>
+              </div>
+              <div className={s.downloadButtonsContainer}>
+                <a
+                  className={clsx(s.button, s.downloadButton, s.otf)}
+                  href="/Interop_1.7_otf.zip"
+                >
+                  OTF 다운로드
+                </a>
+                <a
+                  className={clsx(s.button, s.downloadButton, s.woff)}
+                  href="/Interop_1.7_woff.zip"
+                >
+                  WOFF 다운로드
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
