@@ -156,13 +156,13 @@ export default function Home() {
               <div className={s.downloadButtonsContainer}>
                 <a
                   className={clsx(s.button, s.downloadButton, s.otf)}
-                  href="/Interop_1.7_otf.zip"
+                  href="/Interop-1.8_otf.zip"
                 >
                   OTF 다운로드
                 </a>
                 <a
                   className={clsx(s.button, s.downloadButton, s.woff)}
-                  href="/Interop_1.7_woff.zip"
+                  href="/Interop-1.8_web.zip"
                 >
                   WOFF 다운로드
                 </a>
