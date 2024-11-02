@@ -199,7 +199,7 @@ export default function Home() {
 
         <div className={clsx(s.introduction)}>
           <p>
-            Interop은 Inter font family와 Noto Sans의 한글 glyphs를 조합한
+            Interop은 Inter font family에 Noto Sans의 한글 glyphs를 조합한
             글꼴입니다. 한글과 alphabet이 마치 하나의 언어처럼 보이게 만들기
             위해 본고딕의 크기를 줄이고 굵기를 정교하게 조절했습니다. 2019년에
             대학 과제에 사용하고자 처음 제작했으며 리브랜딩을 거쳐 퍼블릭에
