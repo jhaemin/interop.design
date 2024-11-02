@@ -1,3 +1,7 @@
+.container {
+  overflow-x: hidden;
+}
+
 .interopPage {
   width: calc(100% - 50px);
   max-width: 800px;
@@ -72,44 +76,16 @@
     }
 
     .hangulTitle {
+      font-weight: 600;
       color: var(--always-dark-color) !important;
       position: relative;
       display: inline-flex;
       opacity: 0;
 
-      .hangulTitleEffect {
-        user-select: none;
-        position: absolute;
-        top: 0;
-        left: 0;
+      text-shadow: 0.02em 0.02em 0 var(--red), 0.06em 0.01em 0 var(--purple),
+        -0.02em -0.03em 0 var(--yellow), -0.06em 0 0 var(--green);
 
-        &.green {
-          left: -0.06em;
-          color: #3dfd95;
-          z-index: -1;
-        }
-
-        &.yellow {
-          left: -0.02em;
-          top: -0.03em;
-          color: #ffe501;
-          z-index: -1;
-        }
-
-        &.red {
-          left: 0.02em;
-          top: 0.02em;
-          color: #ff0000;
-          z-index: -1;
-        }
-
-        &.purple {
-          left: 0.06em;
-          top: 0.01em;
-          color: #6349ff;
-          z-index: -2;
-        }
-      }
+      transition: text-shadow 2s ease;
     }
   }
 

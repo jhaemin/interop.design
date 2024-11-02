@@ -74,7 +74,7 @@ export default function Home() {
           },
           {
             at: '-1',
-            duration: 1,
+            duration: 1.2,
           },
         ],
       ])
@@ -131,7 +131,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+    <div className={s.container}>
       <div
         className={clsx(s.interopPage, {
           [s.ready]: ready,
@@ -144,33 +144,7 @@ export default function Home() {
                 <span className={s.englishTitleWrapper}>
                   <span className={s.englishTitle}>Interop</span>
                 </span>
-                <span className={s.hangulTitle}>
-                  인터롭
-                  <span
-                    aria-hidden="true"
-                    className={clsx(s.hangulTitleEffect, s.green)}
-                  >
-                    인터롭
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className={clsx(s.hangulTitleEffect, s.yellow)}
-                  >
-                    인터롭
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className={clsx(s.hangulTitleEffect, s.red)}
-                  >
-                    인터롭
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className={clsx(s.hangulTitleEffect, s.purple)}
-                  >
-                    인터롭
-                  </span>
-                </span>
+                <span className={s.hangulTitle}>인터롭</span>
               </h1>
               <div className={s.subtitleWrapper}>
                 <p className={s.subtitle}>
