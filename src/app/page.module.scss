@@ -81,11 +81,6 @@
       position: relative;
       display: inline-flex;
       opacity: 0;
-
-      text-shadow: 0.02em 0.02em 0 var(--red), 0.06em 0.01em 0 var(--purple),
-        -0.02em -0.03em 0 var(--yellow), -0.06em 0 0 var(--green);
-
-      transition: text-shadow 2s ease;
     }
   }
 

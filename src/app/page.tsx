@@ -77,6 +77,19 @@ export default function Home() {
             duration: 1.2,
           },
         ],
+        [
+          `.${s.hangulTitle}`,
+          {
+            textShadow: [
+              '0.02em 0.02em 0.2em var(--red), -0.02em -0.03em 0.2em var(--yellow), 0.07em 0.01em 0.2em var(--purple), -0.06em 0 0.2em var(--green)',
+              '0.02em 0.02em 0 var(--red), -0.02em -0.03em 0 var(--yellow), 0.07em 0.01em 0 var(--purple), -0.06em 0 0 var(--green)',
+            ],
+          },
+          {
+            at: '-1.2',
+            duration: 1,
+          },
+        ],
       ])
 
       const hero = document.querySelector(`.${s.hero}`)!
