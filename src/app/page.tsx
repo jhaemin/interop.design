@@ -144,14 +144,14 @@ export default function Home() {
                 <span className={s.englishTitleWrapper}>
                   <span className={s.englishTitle}>Interop</span>
                 </span>
-                <span className={s.hangulTitle}>인터롭</span>
+                <span className={s.hangulTitle}> 인터롭</span>
               </h1>
               <div className={s.subtitleWrapper}>
-                <p className={s.subtitle}>
+                <h2 className={s.subtitle}>
                   세상에서 가장 조화로운
                   <br />
                   한글 alphabet 고딕체
-                </p>
+                </h2>
               </div>
               <div className={s.downloadButtonsContainer}>
                 <a
