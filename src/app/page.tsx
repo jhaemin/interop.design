@@ -4,13 +4,19 @@ import clsx from 'clsx'
 import { animate, scroll, timeline } from 'motion'
 import { useEffect, useState } from 'react'
 import s from './page.module.scss'
+import { ResetIcon } from './reset-icon'
+
+const initialFontSize = 27
+const initialFontWeight = 600
+const initialLineHeight = 1.4
+const initialLetterSpacing = -0.01
 
 export default function Home() {
   const [ready, setReady] = useState(false)
-  const [fontSize, setFontSize] = useState(27)
-  const [fontWeight, setFontWeight] = useState(600)
-  const [lineHeight, setLineHeight] = useState(1.4)
-  const [letterSpacing, setLetterSpacing] = useState(-0.01)
+  const [fontSize, setFontSize] = useState(initialFontSize)
+  const [fontWeight, setFontWeight] = useState(initialFontWeight)
+  const [lineHeight, setLineHeight] = useState(initialLineHeight)
+  const [letterSpacing, setLetterSpacing] = useState(initialLetterSpacing)
 
   useEffect(() => {
     const documentFonts = document.fonts
@@ -186,7 +192,7 @@ export default function Home() {
 
         <div className={clsx(s.introduction)}>
           <p>
-            Interop은 Inter font family에 Noto Sans의 한글 glyphs를 조합한
+            Interop은 Inter font family에 Noto Sans의 한글 glyphs를 페어링한
             글꼴입니다. 한글과 alphabet이 마치 하나의 언어처럼 보이게 만들기
             위해 본고딕의 크기를 줄이고 굵기를 정교하게 조절했습니다. 2019년에
             대학 과제에 사용하고자 처음 제작했으며 리브랜딩을 거쳐 퍼블릭에
@@ -209,7 +215,19 @@ export default function Home() {
         <div className={clsx(s.playground)}>
           <div className={s.controllers}>
             <div className={s.controller}>
-              <label htmlFor="size">크기</label>
+              <div className={s.header}>
+                <label htmlFor="size">크기</label>
+                {fontSize !== initialFontSize && (
+                  <button
+                    className={s.resetButton}
+                    onClick={() => {
+                      setFontSize(initialFontSize)
+                    }}
+                  >
+                    <ResetIcon />
+                  </button>
+                )}
+              </div>
               <input
                 className={s.size}
                 type="range"
@@ -224,7 +242,19 @@ export default function Home() {
               />
             </div>
             <div className={s.controller}>
-              <label htmlFor="weight">굵기</label>
+              <div className={s.header}>
+                <label htmlFor="weight">굵기</label>
+                {fontWeight !== initialFontWeight && (
+                  <button
+                    className={s.resetButton}
+                    onClick={() => {
+                      setFontWeight(initialFontWeight)
+                    }}
+                  >
+                    <ResetIcon />
+                  </button>
+                )}
+              </div>
               <input
                 className={s.weight}
                 type="range"
@@ -239,7 +269,19 @@ export default function Home() {
               />
             </div>
             <div className={s.controller}>
-              <label htmlFor="line-height">줄 간격</label>
+              <div className={s.header}>
+                <label htmlFor="line-height">줄 간격</label>
+                {lineHeight !== initialLineHeight && (
+                  <button
+                    className={s.resetButton}
+                    onClick={() => {
+                      setLineHeight(initialLineHeight)
+                    }}
+                  >
+                    <ResetIcon />
+                  </button>
+                )}
+              </div>
               <input
                 className={s.lineHeight}
                 type="range"
@@ -254,7 +296,19 @@ export default function Home() {
               />
             </div>
             <div className={s.controller}>
-              <label htmlFor="letter-spacing">자간</label>
+              <div className={s.header}>
+                <label htmlFor="letter-spacing">자간</label>
+                {letterSpacing !== initialLetterSpacing && (
+                  <button
+                    className={s.resetButton}
+                    onClick={() => {
+                      setLetterSpacing(initialLetterSpacing)
+                    }}
+                  >
+                    <ResetIcon />
+                  </button>
+                )}
+              </div>
               <input
                 className={s.letterSpacing}
                 type="range"
